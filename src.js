@@ -87,3 +87,15 @@ const ownerUserData = {
     }
   ]
 };
+
+const GetComments = comm => {
+  let key = Object.keys(comm)[0];
+  let val = Object.values(comm)[0];
+
+  return (
+    <li>
+      <a href="#" id="comment-user"><span>{key}</span></a>
+      <span id="comment">{val}</span>
+    </li>
+  );
+};
