@@ -99,3 +99,14 @@ const GetComments = comm => {
     </li>
   );
 };
+
+class Comments extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: "" };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    this.setState({ value: e.target.value });
+  }
