@@ -110,3 +110,16 @@ class Comments extends React.Component {
   handleChange(e) {
     this.setState({ value: e.target.value });
   }
+  render() {
+    return (
+      <section className="comment-section">
+        <section className="row text-left">
+          <section className="col-md-12">
+            <ul id="comments">
+              {this.props.comments.map(com => {
+                return GetComments(com);
+              })}
+            </ul>
+          </section>
+        </section>
+        <br />
