@@ -123,3 +123,13 @@ class Comments extends React.Component {
           </section>
         </section>
         <br />
+        <section className="row text-left">
+          <section className="col-md-10">
+            <input
+              type="text"
+              className="form-control"
+              id="usr-comment"
+              value={this.state.value}
+              onChange={this.handleChange}
+            />
+          </section>
