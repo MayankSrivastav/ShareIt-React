@@ -133,3 +133,21 @@ class Comments extends React.Component {
               onChange={this.handleChange}
             />
           </section>
+          <section className="col-md-2">
+            <a href="javascript:void(0)" id="add-comment">
+              <i
+                className="fa fa-plus-circle"
+                aria-hidden="true"
+                onClick={e => {
+                  const val = this.state.value;
+                  this.setState({ value: "" });
+                  this.props.onHandleComment(val);
+                }}
+              />
+            </a>
+          </section>
+        </section>
+      </section>
+    );
+  }
+}
