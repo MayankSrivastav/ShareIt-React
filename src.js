@@ -156,3 +156,22 @@ class LikeUnlike extends React.Component {
   constructor(props) {
     super(props);
   }
+  
+  render() {
+    return (
+      <section className="row text-left">
+        <section className="col-md-12">
+          <ul id="like-unlike" className="align-middle">
+            <li>
+              <a href="javascript:void(0)" id="thumbs-up">
+                <i
+                  className={
+                    this.props.likeUnlike === true
+                      ? "fa fa-thumbs-up"
+                      : "fa fa-thumbs-o-up"
+                  }
+                  aria-hidden="true"
+                  onClick={e => this.props.onHandleLikeUnlike(e)}
+                />
+              </a>
+            </li>
