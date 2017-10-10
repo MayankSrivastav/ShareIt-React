@@ -175,3 +175,14 @@ class LikeUnlike extends React.Component {
                 />
               </a>
             </li>
+            <li>
+              <a href="javascript:void(0)" id="fav">
+                <i
+                  className={
+                    this.props.fav === true ? "fa fa-heart" : "fa fa-heart-o"
+                  }
+                  aria-hidden="true"
+                  onClick={e => this.props.onHandleLikeUnlike(e)}
+                />
+              </a>
+            </li>
