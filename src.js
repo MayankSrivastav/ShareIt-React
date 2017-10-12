@@ -186,3 +186,10 @@ class LikeUnlike extends React.Component {
                 />
               </a>
             </li>
+            <li><span>{this.props.likes} likes</span></li>
+          </ul>
+        </section>
+      </section>
+    );
+  }
+} 
