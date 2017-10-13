@@ -193,3 +193,13 @@ class LikeUnlike extends React.Component {
     );
   }
 } 
+
+const UserName = props => {
+  return (
+    <section className="row">
+      <section className="col-md-6 text-left">
+        <h3>{props.ownerUserName}</h3>
+      </section>
+    </section>
+  );
+};
