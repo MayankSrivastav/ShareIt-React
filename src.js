@@ -203,3 +203,21 @@ const UserName = props => {
     </section>
   );
 };
+
+class MetaPanel extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      id: "",
+      ownerUser: "",
+      currentUser: "",
+      likes: 0,
+      like: [],
+      comments: [],
+      fav: []
+    };
+
+    this.handleLikeUnlike = this.handleLikeUnlike.bind(this);
+    this.handleComment = this.handleComment.bind(this);
+  }
