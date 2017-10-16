@@ -221,3 +221,20 @@ class MetaPanel extends React.Component {
     this.handleLikeUnlike = this.handleLikeUnlike.bind(this);
     this.handleComment = this.handleComment.bind(this);
   }
+  
+  componentDidMount() {
+    const prop = this.props.image_meta;
+    if (this.props.id === prop.id) {
+      this.setState({
+        id: prop.id,
+        ownerUser: this.props.ownerUser,
+        currentUser: this.props.currentUser,
+        likes: prop.likes,
+        like: prop.like,
+        comments: prop.comments,
+        fav: prop.fav
+      });
+    } else {
+      this.setState({ ownerUser: this.props.ownerUser });
+    }
+  }
