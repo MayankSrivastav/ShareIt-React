@@ -238,3 +238,16 @@ class MetaPanel extends React.Component {
       this.setState({ ownerUser: this.props.ownerUser });
     }
   }
+  handleLikeUnlike(e) {
+    const target = e.target.className;
+    if (target.indexOf("thumbs") !== -1) {
+      if (target.indexOf("thumbs-up") !== -1) {
+        let like = this.state.like;
+        let likeUsers = like.slice(like.indexOf(this.state.currentUser), 0);
+        this.setState(prevState => {
+          return {
+            like: likeUsers,
+            likes: prevState.likes - 1
+          };
+        });
+      }
