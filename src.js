@@ -250,4 +250,14 @@ class MetaPanel extends React.Component {
             likes: prevState.likes - 1
           };
         });
+      } else if (target.indexOf("thumbs-o-up") !== -1) {
+        let like = this.state.like;
+        like.push(this.state.currentUser);
+        this.setState(prevState => {
+          return {
+            like: like,
+            likes: prevState.likes + 1
+          };
+        });
       }
+    }
