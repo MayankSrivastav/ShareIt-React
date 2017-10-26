@@ -260,4 +260,15 @@ class MetaPanel extends React.Component {
           };
         });
       }
+    } else if (target.indexOf("heart") !== -1) {
+      if (target.indexOf("fa-heart-o") !== -1) {
+        let favs = this.state.fav;
+        favs.push(this.state.currentUser);
+        this.setState({ fav: favs });
+      } else if (target.indexOf("fa-heart") !== -1) {
+        let favs = this.state.fav;
+        let newFavs = favs.slice(favs.indexOf(this.state.currentUser), 0);
+        this.setState({ fav: newFavs });
+      }
     }
+  }
