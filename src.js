@@ -272,3 +272,10 @@ class MetaPanel extends React.Component {
       }
     }
   }
+
+  handleComment(e) {
+    const comment = this.state.comments;
+    const currentUser = this.state.currentUser;
+    comment.push({ [currentUser]: e });
+    this.setState({ comments: comment });
+  }
